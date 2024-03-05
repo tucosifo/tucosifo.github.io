@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Inspirational Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #quote {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #generate {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #generate:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Inspirational Quotes</h1>
+    <div id="quote"></div>
+    <button id="generate" onclick="generateQuote()">Generate Quote</button>
+
+    <script>
+        const quotes = [
+            "Do not compare yourself to others. If you do so, you are insulting yourself. - Adolf Hitler",
+            "And I can fight only for something that I love, love only what I respect, and respect only what I at least know. - Adolf Hitler",
+            "If you want to shine like sun first you have to burn like it. - Adolf Hitler",
+            "Anyone can deal with victory. Only the mighty can bear defeat. - Adolf Hitler",
+            "The man who has no sense of history, is like a man who has no ears or eyes. - Adolf Hitler",
+            "Only the Jew knew that by an able and persistent use of propaganda heaven itself can be presented to the people as if it were hell and, vice versa, the most miserable kind of life can be presented as if it were paradise. The Jew knew this and acted accordingly. But the German, or rather his Government, did not have the slightest suspicion of it. During the War the heaviest of penalties had to be paid for that ignorance. - Adolf Hitler",
+            "By defending myself against the Jew, I am fighting for the work of the Lord - Adolf Hitler",
+            "Humanitarianism is the expression of stupidity and cowardice. - Adolf Hitler",
+            "Life doesn't forgive weakness. - Adolf Hitler",
+            "I believe today that my conduct is in accordance with the will of the Almighty. - Adolf Hitler"
+        ];
+
+        function generateQuote() {
+            const randomNumber = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerText = quotes[randomNumber];
+        }
+    </script>
+</body>
+</html>
